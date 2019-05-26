@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
-    public float speed;
-    Vector3 pos;
-    Vector3 newPos;
-    
-    // Update is called once per frame
+    public float fallSpeed = 8.0f;
+
+    public BoxCollider2D playerCol;
+    public BoxCollider2D projCol;
+
     void Update()
     {
-        pos = transform.position;
-        newPos = pos + (Vector3.down * speed);
-        transform.position = newPos;
+        transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        PlayerManager.playerHealth--;
+        Destroy(gameObject);
+        Debug.Log(PlayerManager.playerHealth);
     }
 }
