@@ -12,6 +12,7 @@ public class ProjectileMovement : MonoBehaviour
     void Update()
     {
         transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+        checkForOutOfBounds();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -19,5 +20,13 @@ public class ProjectileMovement : MonoBehaviour
         PlayerManager.playerHealth--;
         Destroy(gameObject);
         Debug.Log(PlayerManager.playerHealth);
+    }
+
+    void checkForOutOfBounds()
+    {
+        if(transform.position.y < -8)
+        {
+            Destroy(gameObject);
+        }
     }
 }
