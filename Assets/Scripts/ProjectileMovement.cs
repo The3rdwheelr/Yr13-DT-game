@@ -24,7 +24,7 @@ public class ProjectileMovement : MonoBehaviour
 
     void checkForOutOfBounds()
     {
-        if(transform.position.y < -8)
+        if(transform.position.y < -12)
         {
             Destroy(gameObject);
         }
