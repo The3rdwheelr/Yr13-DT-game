@@ -26,7 +26,7 @@ public class ProjectileSpawn : MonoBehaviour
             timer = timeToSpawn;
         }
     }
-
+    // if above is met, spawn object
     void spawnObject(int spawnLocation)
     {
         Instantiate(projectileObject, spawnPositions[spawnLocation].position, Quaternion.identity);
