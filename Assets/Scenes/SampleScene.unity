@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f0ccb28af0f15a459bbf453832b9b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 566902069}
   lanesFromCentre: 2
 --- !u!61 &566902067
 BoxCollider2D:
