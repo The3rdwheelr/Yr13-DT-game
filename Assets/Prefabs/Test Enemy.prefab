@@ -96,7 +96,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallSpeed: 8
-  playerCol: {fileID: 0}
+  playerCol: {fileID: 3645150198245095036, guid: e7180fefca22e4e4f8efb36baaf6daac,
+    type: 3}
   projCol: {fileID: 546977637160747781}
 --- !u!61 &546977637160747781
 BoxCollider2D:

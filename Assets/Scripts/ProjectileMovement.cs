@@ -6,9 +6,6 @@ public class ProjectileMovement : MonoBehaviour
 {
     public float fallSpeed = 8.0f;
 
-    public BoxCollider2D playerCol;
-    public BoxCollider2D projCol;
-
     void Update()
     {
         transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
@@ -19,7 +16,6 @@ public class ProjectileMovement : MonoBehaviour
     {
         PlayerManager.playerHealth--;
         Destroy(gameObject);
-        Debug.Log(PlayerManager.playerHealth);
     }
 
     void checkForOutOfBounds()

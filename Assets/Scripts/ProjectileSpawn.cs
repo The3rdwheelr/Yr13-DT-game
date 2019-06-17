@@ -4,31 +4,40 @@ using UnityEngine;
 
 public class ProjectileSpawn : MonoBehaviour
 {
+    public GameObject[] objectTypes;
     public Transform[] spawnPositions;
-    public GameObject projectileObject;
 
     public float timeToSpawn;
-    float timer;
-    // Start is called before the first frame update
-    void Start()
+    float spawnTimer;
+
+    float spawnRandomizer;
+
+    private void Start()
     {
-        spawnObject(1);
-        timer = timeToSpawn;
+        spawnTimer = timeToSpawn;
+    }
+    private void Update()
+    {
+        
+        spawnTimer -= Time.deltaTime;
+        if (spawnTimer  <= 0) { spawnObject(); spawnTimer = timeToSpawn; }
     }
 
-    // Update is called once per frame
-    void Update()
+    void spawnObject()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        int spawnPos = Random.Range(0, spawnPositions.Length);
+        spawnRandomizer = Random.Range(0, 100);
+        if (spawnRandomizer < 5)
         {
-            spawnObject(Random.Range(0, spawnPositions.Length));
-            timer = timeToSpawn;
+            Instantiate(objectTypes[0], spawnPositions[spawnPos].position, Quaternion.identity);
         }
-    }
-    // if above is met, spawn object
-    void spawnObject(int spawnLocation)
-    {
-        Instantiate(projectileObject, spawnPositions[spawnLocation].position, Quaternion.identity);
+        else if (spawnRandomizer < 20)
+        {
+            Instantiate(objectTypes[1], spawnPositions[spawnPos].position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(objectTypes[2], spawnPositions[spawnPos].position, Quaternion.identity);
+        }
     }
 }
