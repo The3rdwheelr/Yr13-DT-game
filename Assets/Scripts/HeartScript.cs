@@ -20,7 +20,7 @@ public class HeartScript : MonoBehaviour
         }
         else
         {
-            PlayerManager.playerScore += 10;
+            PlayerManager.playerScore += 25;
         }
         Destroy(gameObject);
     }
