@@ -14,11 +14,13 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        //player starts on 3 lives
         playerHealth = 3;
     }
     // Update is called once per frame
     void Update()
     {
+        //this is what displays the health and score on the in game UI
         scoreUI.text = "Score: "+playerScore.ToString();
         healthUI.text = playerHealth.ToString();
     }
