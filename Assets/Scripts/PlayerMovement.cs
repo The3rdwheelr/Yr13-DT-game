@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
+
 {
     public Animator animator;
     float turnTimer;
@@ -12,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        //clamps the player movement according to how much lanes the player moves away from the "center" lane
+        // clamps the player movement according to how much lanes the player moves away from the "center" lane
         laneBorderMin = transform.position.x - lanesFromCentre;
         laneBorderMax = transform.position.x + lanesFromCentre;
         turnTimer = 0.5f;
@@ -34,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position += Vector3.right;
         }
 
-        //adds a turn timer so you can actually see the turn animation, otherwise it would last for 0.01 of a second or something
+        // adds a turn timer so you can actually see the turn animation, otherwise it would last for 0.01 of a second or something
         if (turnTimer > 0)
         {
             turnTimer -= Time.deltaTime;

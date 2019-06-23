@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BGscroll : MonoBehaviour
 {
-    public int TargetScore;
+    public int targetScore;
     public float BckgrndSpd;
     public Renderer BckgrndRend;
 
     void Start()
     {
-        TargetScore = 250;
+        targetScore = 250;
         BckgrndSpd = 0.5f;
     }
 
@@ -20,10 +20,10 @@ public class BGscroll : MonoBehaviour
         //scrolls the background image in the mesh renderer infinitely on the y axis at the speed of the float
         BckgrndRend.material.mainTextureOffset += new Vector2(0f,BckgrndSpd * Time.deltaTime);
 
-        if (TargetScore >=250 && TargetScore <-1000)
+        if (PlayerManager.playerScore >= targetScore && targetScore <= 1000)
         {
-            BckgrndSpd += 0.1f;
-            TargetScore += 250;
+            BckgrndSpd += 0.0625f;
+            targetScore += 250;
         }
     }
 

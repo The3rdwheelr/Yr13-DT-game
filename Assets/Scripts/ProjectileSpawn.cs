@@ -20,8 +20,9 @@ public class ProjectileSpawn : MonoBehaviour
     {
 
         spawnTimer -= Time.deltaTime;
-        if (spawnTimer <= 0) { spawnObject(); spawnTimer = timeToSpawn; } //if spawn timer is 0, spawn a object from the commands below
-    }
+        if (spawnTimer <= 0) { spawnObject(); spawnTimer = timeToSpawn; } // if spawn timer is 0, spawn a object from the commands below
+
+    }   
 
     void spawnObject()
     {
@@ -35,11 +36,11 @@ public class ProjectileSpawn : MonoBehaviour
         {
             Instantiate(objectTypes[1], spawnPositions[spawnPos].position, Quaternion.identity);
         }
-        else if (spawnRandomizer < 65) //spawn a cat with a 35% chance
+        else if (spawnRandomizer < 67.5) //spawn a cat with a 37.5% chance
         {
             Instantiate(objectTypes[2], spawnPositions[spawnPos].position, Quaternion.identity);
         }
-        else //spawn a dog with a 35% chance (for variety)
+        else //spawn a dog with a 37.5% chance (for variety)
         {
             Instantiate(objectTypes[3], spawnPositions[spawnPos].position, Quaternion.identity);
         }

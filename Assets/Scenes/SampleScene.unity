@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be0d7a915c769e499a9cc1a42b721b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetScore: 0
+  targetScore: 0
   BckgrndSpd: 0.5
   BckgrndRend: {fileID: 38795075}
 --- !u!1 &298495968
