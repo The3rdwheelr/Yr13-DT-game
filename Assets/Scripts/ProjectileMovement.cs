@@ -17,6 +17,7 @@ public class ProjectileMovement : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         PlayerManager.playerHealth--; //decrease player health by 1
+        PlayerManager.playerScore--; //decrease player score by 1
         Destroy(gameObject); // destroys the obstacle afterwards
     }
 
