@@ -6,15 +6,18 @@ public class ProjectileSpawn : MonoBehaviour
 {
     public GameObject[] objectTypes; //array for the types of objects that could spawn
     public Transform[] spawnPositions; //array for the spawnpoints
-
-    public float timeToSpawn;
+    public float timeToSpawn; // reference for the spawn delay of obstacles
     float spawnTimer;
+    int targetScore;
 
     float spawnRandomizer;
 
     private void Start()
     {
         spawnTimer = timeToSpawn; //the delay between object spawns
+        targetScore = 250;
+        timeToSpawn = 0.2f;
+
     }
     private void Update()
     {
@@ -22,6 +25,11 @@ public class ProjectileSpawn : MonoBehaviour
         spawnTimer -= Time.deltaTime;
         if (spawnTimer <= 0) { spawnObject(); spawnTimer = timeToSpawn; } // if spawn timer is 0, spawn a object from the commands below
 
+        if (PlayerManager.playerScore >= targetScore && targetScore <= 1000)
+        {
+            timeToSpawn -= 0.005f;
+            targetScore += 250;
+        }
     }   
 
     void spawnObject()
