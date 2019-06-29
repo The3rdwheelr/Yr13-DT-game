@@ -20,9 +20,10 @@ public class DeathUI : MonoBehaviour
         pauseUI.SetActive(false);
     }
 
-    public void Playagain()
+    public void PlayAgain()
     {
         SceneManager.LoadScene("GameScene");
+
     }
 
     // Update is called once per frame
@@ -46,5 +47,11 @@ public class DeathUI : MonoBehaviour
     void updateDeathScore()
     {
         scoreText.text = "Your Score Was:\n" + PlayerManager.playerScore;
+    }
+
+    void checkForHighScore()
+    {
+        StoreScore.loadScores();
+
     }
 }

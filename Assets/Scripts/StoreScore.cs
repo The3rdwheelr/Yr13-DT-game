@@ -4,12 +4,12 @@ using UnityEngine;
 using Newtonsoft.Json;
 using System.IO;
 
-public class StoreScore : MonoBehaviour
+public class StoreScore
 {
     public static HighScores highScores;
     public const string scoreFile = "highScores.json";
 
-    void saveScores()
+    public void saveScores()
     {
         string filePath = Path.Combine(Application.persistentDataPath, scoreFile);
 
@@ -18,7 +18,7 @@ public class StoreScore : MonoBehaviour
         File.WriteAllText(filePath, json);
     }
 
-    void loadScores()
+    public void loadScores()
     {
         string filePath = Path.Combine(Application.persistentDataPath, scoreFile);
         if (File.Exists(filePath))
@@ -37,14 +37,13 @@ public class StoreScore : MonoBehaviour
 
 public class HighScores
 {
-    public Dictionary<string, int> highScores;
+    public static int[] highScores = new int[3];
 
     public void resetScores()
     {
-        highScores.Clear();
         for (int i = 0; i < 3; i++)
         {
-            highScores.Add("------", 0);
+            highScores[i] = 0;
         }
     }
 }
