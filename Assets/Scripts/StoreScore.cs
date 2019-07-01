@@ -6,30 +6,30 @@ using System.IO;
 
 public class StoreScore
 {
-    public static HighScores highScores;
+    public static HighScores scoreClass;
     public const string scoreFile = "highScores.json";
 
-    public void saveScores()
+    public static void saveScores()
     {
         string filePath = Path.Combine(Application.persistentDataPath, scoreFile);
 
-        string json = JsonConvert.SerializeObject(highScores, Formatting.Indented);
+        string json = JsonConvert.SerializeObject(scoreClass, Formatting.Indented);
 
         File.WriteAllText(filePath, json);
     }
 
-    public void loadScores()
+    public static void loadScores()
     {
         string filePath = Path.Combine(Application.persistentDataPath, scoreFile);
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
-            highScores = JsonConvert.DeserializeObject<HighScores>(json);
+            scoreClass = JsonConvert.DeserializeObject<HighScores>(json);
         }
         else
         {
-            highScores = new HighScores();
-            highScores.resetScores();
+            scoreClass = new HighScores();
+            scoreClass.resetScores();
             saveScores();
         }
     }
@@ -37,13 +37,14 @@ public class StoreScore
 
 public class HighScores
 {
-    public static int[] highScores = new int[3];
+    public List<int> highScores = new List<int>();
 
     public void resetScores()
     {
+        highScores.Clear();
         for (int i = 0; i < 3; i++)
         {
-            highScores[i] = 0;
+            highScores.Add(0);
         }
     }
 }

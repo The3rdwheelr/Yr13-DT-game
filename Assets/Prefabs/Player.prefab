@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3645150198245095036}
   - component: {fileID: 3645150198245095035}
   - component: {fileID: 3645150198245095034}
+  - component: {fileID: 1761228398}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4fc82fadd0e1d4ed8a697be473d72842, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -136,6 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f639542108af834a82c7498142bcb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreUI: {fileID: 0}
+  healthUI: {fileID: 0}
 --- !u!95 &3645150198245095034
 Animator:
   serializedVersion: 3
@@ -155,3 +158,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1761228398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3645150198245095008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d83cd469e9168448c42ba37f82ef19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathUI: {fileID: 0}
+  gameUI: {fileID: 0}
+  pauseUI: {fileID: 0}
+  player: {fileID: 3645150198245095008}
+  scoreText: {fileID: 0}

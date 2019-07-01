@@ -21,6 +21,6 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         //this is what displays score on the in game UI
-        scoreUI.text = "Score: "+playerScore.ToString();
+        scoreUI.text = "Score: " + playerScore.ToString();
     }
 }

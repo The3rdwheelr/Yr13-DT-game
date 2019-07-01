@@ -560,7 +560,6 @@ GameObject:
   - component: {fileID: 360703862}
   - component: {fileID: 360703861}
   - component: {fileID: 360703860}
-  - component: {fileID: 360703863}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -631,8 +630,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 780313024}
-        m_MethodName: Playagain
+      - m_Target: {fileID: 1761228398}
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -681,23 +680,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360703858}
   m_CullTransparentMesh: 0
---- !u!114 &360703863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360703858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d83cd469e9168448c42ba37f82ef19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathUI: {fileID: 0}
-  gameUI: {fileID: 0}
-  pauseUI: {fileID: 0}
-  player: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,12 +1448,12 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 3ed7d2261b708e547bb02b31919d572d, type: 3}
-        m_MethodName: 
+      - m_Target: {fileID: 925994535}
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1525,7 +1507,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 780313023}
-  - component: {fileID: 780313024}
   m_Layer: 5
   m_Name: Death UI
   m_TagString: Untagged
@@ -1555,23 +1536,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &780313024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 780313022}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d83cd469e9168448c42ba37f82ef19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathUI: {fileID: 0}
-  gameUI: {fileID: 0}
-  pauseUI: {fileID: 0}
-  player: {fileID: 0}
-  scoreText: {fileID: 0}
 --- !u!1 &925994529
 GameObject:
   m_ObjectHideFlags: 0
@@ -2774,29 +2738,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1761228397 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3645150198245095008, guid: e7180fefca22e4e4f8efb36baaf6daac,
+--- !u!114 &1761228398 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac,
     type: 3}
   m_PrefabInstance: {fileID: 3645150198769765199}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1761228398
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761228397}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6d83cd469e9168448c42ba37f82ef19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathUI: {fileID: 780313022}
-  gameUI: {fileID: 1492117403}
-  pauseUI: {fileID: 633787147}
-  player: {fileID: 1761228397}
-  scoreText: {fileID: 1297213573}
 --- !u!1 &1942264139
 GameObject:
   m_ObjectHideFlags: 0
@@ -3085,15 +3038,21 @@ PrefabInstance:
       propertyPath: scoreUI
       value: 
       objectReference: {fileID: 1416549734}
-    - target: {fileID: 3645150198245095035, guid: e7180fefca22e4e4f8efb36baaf6daac,
-        type: 3}
-      propertyPath: healthUI
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: deathUI
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3645150198245095039, guid: e7180fefca22e4e4f8efb36baaf6daac,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 31
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 780313022}
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: gameUI
+      value: 
+      objectReference: {fileID: 1492117403}
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: pauseUI
+      value: 
+      objectReference: {fileID: 633787147}
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1297213573}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}

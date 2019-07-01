@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
-public class DeathUI : MonoBehaviour
+public class DeathManager : MonoBehaviour
 {
     public GameObject deathUI;
     public GameObject gameUI;
@@ -29,9 +30,10 @@ public class DeathUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerManager.playerHealth == 0)
+        if (PlayerManager.playerHealth <= 0)
         {
             updateDeathScore();
+            saveHighScores();
             Die();
         }
     }
@@ -49,9 +51,12 @@ public class DeathUI : MonoBehaviour
         scoreText.text = "Your Score Was:\n" + PlayerManager.playerScore;
     }
 
-    void checkForHighScore()
+    void saveHighScores()
     {
         StoreScore.loadScores();
-
+        StoreScore.scoreClass.highScores.Add(PlayerManager.playerScore);
+        StoreScore.scoreClass.highScores.Sort();
+        StoreScore.scoreClass.highScores.RemoveAt(StoreScore.scoreClass.highScores.Count - 1);
+        StoreScore.saveScores();
     }
 }
