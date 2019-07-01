@@ -1513,7 +1513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &780313023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2973,6 +2973,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: deathUI
+      value: 
+      objectReference: {fileID: 780313022}
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: gameUI
+      value: 
+      objectReference: {fileID: 1492117403}
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: pauseUI
+      value: 
+      objectReference: {fileID: 633787147}
+    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1297213573}
     - target: {fileID: 3645150198245095008, guid: e7180fefca22e4e4f8efb36baaf6daac,
         type: 3}
       propertyPath: m_Name
@@ -3038,21 +3054,5 @@ PrefabInstance:
       propertyPath: scoreUI
       value: 
       objectReference: {fileID: 1416549734}
-    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
-      propertyPath: deathUI
-      value: 
-      objectReference: {fileID: 780313022}
-    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
-      propertyPath: gameUI
-      value: 
-      objectReference: {fileID: 1492117403}
-    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
-      propertyPath: pauseUI
-      value: 
-      objectReference: {fileID: 633787147}
-    - target: {fileID: 1761228398, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1297213573}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7180fefca22e4e4f8efb36baaf6daac, type: 3}

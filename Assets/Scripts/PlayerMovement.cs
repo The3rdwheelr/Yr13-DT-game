@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Update()
     {
-        // sets the player to move left/right on key press, as well as play animations accordingly
+        // sets the player to move left/right on key press if they will still be within boundaries, as well as play animations accordingly
         if (Input.GetKeyDown(KeyCode.A) && transform.position.x > laneBorderMin)
         {
             animator.SetBool("LeftKeypress", true);
@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
             transform.position += Vector3.right;
         }
 
-        // adds a turn timer so you can actually see the turn animation, otherwise it would last for 0.01 of a second or something
+        // uses the turn timer in void start so you can actually see the turn animation, otherwise it would last for 0.01 of a second or something
         if (turnTimer > 0)
         {
             turnTimer -= Time.deltaTime;
