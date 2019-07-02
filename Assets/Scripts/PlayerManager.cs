@@ -10,7 +10,6 @@ public class PlayerManager : MonoBehaviour
     public static int playerScore;
 
     public TextMeshProUGUI scoreUI;
-    public TextMeshProUGUI healthUI;
 
     private void Start()
     {
