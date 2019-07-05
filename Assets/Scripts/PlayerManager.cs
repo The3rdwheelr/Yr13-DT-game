@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     {
         //player starts on 3 lives
         playerHealth = 3;
+        Time.timeScale = 1;
     }
     // Update is called once per frame
     void Update()

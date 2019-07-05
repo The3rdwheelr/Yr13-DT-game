@@ -74,7 +74,11 @@ public class DeathManager : MonoBehaviour
         StoreScore.scoreClass.highScores.Reverse();
         // Remove the fourth entry of the list (to keep top 3)
         StoreScore.scoreClass.highScores.RemoveAt(StoreScore.scoreClass.highScores.Count - 1);
-        
+
+        int scoreIndex = StoreScore.scoreClass.highScores.IndexOf(PlayerManager.playerScore);
+        StoreScore.scoreClass.playerNames.Insert(scoreIndex, StartMenu.playerName);
+
+
         // Save the scores to the .json file
         StoreScore.saveScores();
         // Reset the playerScore
