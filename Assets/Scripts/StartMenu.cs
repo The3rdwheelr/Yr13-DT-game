@@ -18,6 +18,7 @@ public class StartMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if the player does not input a name, sets the player name to guest
         if (nameInput.text == "")
         {
             playerName = "Guest";

@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameisPaused = false;
 
-    public GameObject PauseMenuUI; //reference for setting the UI part of the Menu active/inactive
+    public GameObject PauseMenuUI; // reference for setting the UI part of the Menu active/inactive
 
     private void Start()
     {
@@ -17,7 +17,7 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape)) //when esc key is pressed, check if game is paused, if it is, resume. If game is not paused, pause game
+        if (Input.GetKeyDown(KeyCode.Escape)) // when esc key is pressed, check if game is paused, if it is, resume. If game is not paused, pause game
         {
             if (GameisPaused)
             {

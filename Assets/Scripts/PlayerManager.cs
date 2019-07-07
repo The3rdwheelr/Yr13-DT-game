@@ -20,7 +20,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //this is what displays score on the in game UI
+        // this is what displays score on the in game UI
         scoreUI.text = "Score: " + playerScore.ToString();
     }
 }
