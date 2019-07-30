@@ -58,12 +58,15 @@ public class DeathManager : MonoBehaviour
         StoreScore.scoreClass.highScores.Sort();
         StoreScore.scoreClass.highScores.RemoveAt(StoreScore.scoreClass.highScores.Count - 1);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         int scoreIndex = StoreScore.scoreClass.highScores.IndexOf(PlayerManager.playerScore);
         StoreScore.scoreClass.playerNames.Insert(scoreIndex, StartMenu.playerName);
 
 
         // Save the scores to the .json file
+=======
+>>>>>>> parent of 7c7b177... fixed score saving!
 =======
 >>>>>>> parent of 7c7b177... fixed score saving!
         StoreScore.saveScores();
