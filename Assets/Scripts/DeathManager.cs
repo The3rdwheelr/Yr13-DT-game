@@ -40,6 +40,7 @@ public class DeathManager : MonoBehaviour
 
     void Die()
     {
+        PlayerManager.playerScore = 0;
         player.SetActive(false);
         deathUI.SetActive(true);
         gameUI.SetActive(false);
@@ -54,21 +55,21 @@ public class DeathManager : MonoBehaviour
     void saveHighScores()
     {
         StoreScore.loadScores();
+        //Add Score
         StoreScore.scoreClass.highScores.Add(PlayerManager.playerScore);
         StoreScore.scoreClass.highScores.Sort();
+        StoreScore.scoreClass.highScores.Reverse();
         StoreScore.scoreClass.highScores.RemoveAt(StoreScore.scoreClass.highScores.Count - 1);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-        int scoreIndex = StoreScore.scoreClass.highScores.IndexOf(PlayerManager.playerScore);
-        StoreScore.scoreClass.playerNames.Insert(scoreIndex, StartMenu.playerName);
+        //Add name
+        int scoreIndex;
+        if (StoreScore.scoreClass.highScores.Contains(PlayerManager.playerScore))
+        {
+            scoreIndex = StoreScore.scoreClass.highScores.IndexOf(PlayerManager.playerScore);
+            StoreScore.scoreClass.playerNames.Insert(scoreIndex, StartMenu.playerName);
+            StoreScore.scoreClass.playerNames.RemoveAt(StoreScore.scoreClass.playerNames.Count - 1);
+        }
 
-
-        // Save the scores to the .json file
-=======
->>>>>>> parent of 7c7b177... fixed score saving!
-=======
->>>>>>> parent of 7c7b177... fixed score saving!
         StoreScore.saveScores();
     }
 }
