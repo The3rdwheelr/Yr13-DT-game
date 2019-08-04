@@ -802,7 +802,7 @@ GameObject:
   - component: {fileID: 618617738}
   - component: {fileID: 618617737}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -847,9 +847,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, Unity.ugui,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Dodge the animals and pickup moneybags to gain score. If you pick up hearts
-    while on full hearts you will also gain score. Game gets harder so try to get
-    the highest score!
+  m_text: Use keys A & D to move! Dodge the animals and pickup moneybags to gain
+    score. If you pick up hearts while on full hearts you will also gain score. Game
+    gets harder so try to get the highest score!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -918,12 +918,12 @@ MonoBehaviour:
   m_margin: {x: 0.000061035156, y: 0, z: 0.00012207031, w: 0}
   m_textInfo:
     textComponent: {fileID: 618617737}
-    characterCount: 172
+    characterCount: 196
     spriteCount: 0
-    spaceCount: 32
-    wordCount: 33
+    spaceCount: 39
+    wordCount: 39
     linkCount: 0
-    lineCount: 7
+    lineCount: 8
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1355,7 +1355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: -436}
+  m_AnchoredPosition: {x: 17, y: -467}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1507955993
